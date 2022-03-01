@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* nav */
+nav {
+  float: left;
+  width: 20%;
+  height: 1100px; 
+  background: #ccc;
+  padding: 15px;
+}
+
+/* Menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+    li{
+    list-style-type:none;
+    position:relative;
+    width:120px;
+    }
+                
+    li a{
+    text-decoration:none;
+    display:inline-block;
+    padding:5px 10px;
+    width:120px;
+    height:30px;
+    border:1px solid #000;
+    color:#fff;
+    background-color:#000;
+    }
+
+    li a:hover{
+    color:#000;
+    background-color:#fff;
+                
+    }
+    
+    nav li ul{
+        display:none;
+        position:absolute;
+        top:0px;
+        left:120px;
+    }
+            
+    nav li:hover ul{display:block;}
+/*Article */
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 1100px; /* should not removed */
+}
+
+/* section */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout*/
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>Proyecto de Sitio Web 2022 16-01</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Temas</a>
+            <ul>
+                <li><a href="#">Tema 1</a></li>
+                <li><a href="#">Tema 2</a></li>
+                
+            </ul>
+        </li>
+        <li><a href="#">Recursos</a>
+            <ul>
+            <li><a href="#">Recursos 1</a></li>
+            <li><a href="#">Recursos 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Aprendizaje</a>
+            <ul>
+            <li><a href="#">Actividad 1</a></li>
+            <li><a href="#">Actividad 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Acerca de</a>
+            <ul>
+                <li><a href="#">Autor</a></li>
+            </ul>
+        </li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h2>Prop&oacute;sito del Sitio</h2>
+    <p>Por este medio se crea una interfaz web donde se refleja el contenido de esta 
+      usando el lenguaje de programación HTML con el Framework CSS para diseños elegantes y dinámicos.</p>
+
+    <h1>CSS (hojas de estilo en cascada)</h1>
+
+    <p>CSS es el lenguaje que usamos para diseñar un documento HTML.</p>
+    <p>CSS describe cómo deben mostrarse los elementos HTML. </p>
+
+
+    <img src="https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/pseudoclases-css-first-child-last-child-nth-child-t1.png" 
+    alt="Imagen CSS" width="600" height="327">
+
+    <h1>Mapeo Mockup</h1>
+
+    <img src="../mockup.jpg"
+      alt="mockup" width="420" height="420"/>
+
+  </article>
+
+
+</section>
+
+<footer>
+  <p>caleonm@unadvirtual.edu.co</p>
+  <p>andreslm104</p>
+  <p>Marzo de 2022</p>
+</footer>
+
+</body>
+</html>
+
+
+
