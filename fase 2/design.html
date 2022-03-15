@@ -26,7 +26,7 @@ header {
 nav {
   float: left;
   width: 20%;
-  height: 1100px; 
+  height: 2500px; 
   background: #ccc;
   padding: 15px;
 }
@@ -76,7 +76,7 @@ article {
   padding: 20px;
   width: 80%;
   background-color: #f1f1f1;
-  height: 1100px; /* should not removed */
+  height: 2500px; /* should not removed */
 }
 
 /* section */
@@ -101,6 +101,20 @@ footer {
     height: auto;
   }
 }
+/* Columns */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 270px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style>
 </head>
 <body>
@@ -113,7 +127,7 @@ footer {
 <section>
   <nav>
     <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="../index.html">Inicio</a></li>
         <li><a href="#">Temas</a>
             <ul>
                 <li><a href="#">Tema 1</a></li>
@@ -148,17 +162,75 @@ footer {
 
     <h1>CSS (hojas de estilo en cascada)</h1>
 
-    <p>CSS es el lenguaje que usamos para diseñar un documento HTML.</p>
-    <p>CSS describe cómo deben mostrarse los elementos HTML. </p>
+    <p>CSS son las siglas en inglés para «hojas de estilo en cascada» (Cascading Style Sheets). Básicamente, 
+      es un lenguaje que maneja el diseño y presentación de las páginas web, es decir, cómo lucen 
+      cuando un usuario las visita. Funciona junto con el lenguaje HTML que se encarga del contenido 
+      básico de las páginas.</p>
 
+    <h1>¿Para que sirve CSS?</h1>
 
-    <img src="https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/pseudoclases-css-first-child-last-child-nth-child-t1.png" 
-    alt="Imagen CSS" width="600" height="327">
+    <p>Con CSS puedes crear reglas para decirle a tu sitio web cómo quieres mostrar 
+      la información y puedes guardar los comandos para elementos de estilo (como fuentes, colores, tamaños, etc.) 
+      separados de los que configuran el contenido.</p>
 
+    <h1>¿Como usar CSS?</h1>
+    <p>Escribe reglas para la apariencia de tu sitio</p>
+    <p>En lugar de hacer un listado del contenido de la página, CSS utiliza las reglas asignadas a elementos HTML, 
+      un documento HTML completo o varios de ellos. Estas reglas son procesadas por el navegador web cuando carga 
+      el archivo HTML.</p>
+
+    <p>Una regla se luce asi</p>
+    <img src="../fase 2/images/queescssregla.jpg"
+      alt="mockup" width="420" height="210"/>
+
+    <h1>Conoce los componentes de la regla</h1>
+    <h1>Selector CSS</h1>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        
+        <p>Todas las reglas CSS comienzan con un selector. Este indica la parte del documento donde se aplica la regla. 
+          Y al selector le siguen una o más declaraciones dentro de corchetes. Existen varias formas de escribir un selector; 
+          el más básico es el que viste en el ejemplo de arriba: cada elemento HTML a modificar 
+          se menciona por su nombre (p, div, a, etc.):</p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <img src="../fase 2/images/ejemploselector.jpg"
+      alt="mockup" width="420" height="220"/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        
+        <p>Pero también puedes señalar los elementos por su clase o atributo. La clase de selector está escrito como un 
+          punto (.) seguido del nombre de la clase. La identidad del selector se escribe con una almohadilla (#), 
+          seguida del nombre de identidad</p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <img src="../fase 2/images/ejemplodecomoescribirselector.jpg"
+      alt="mockup" width="420" height="220"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        
+        <p>Y si deseas asignar la misma regla a múltiples elementos, puedes hacerlo con el selector en grupo. 
+          Este abarca dos o más nombres de elementos separados por comas. El orden no es importante, 
+          pues la regla se aplicará a todos los elementos que se enumeren: </p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <img src="../fase 2/images/ejemplogrupodeelementos.jpg"
+        alt="mockup" width="420" height="220"/>
+      </div>
+    </div>
     <h1>Mapeo Mockup</h1>
 
     <img src="../mockup.jpg"
-      alt="mockup" width="420" height="420"/>
+      alt="mockup" width="620" height="420"/>
+
+    <p>En el desarrollo de la maqueta Mockup, se tomara en cuenta para futuras actividades por venir,
+      dependiendo si es viable aunque se realize cambios que alteren el diseño de la maqueta.
+    </p>
 
   </article>
 
@@ -168,7 +240,7 @@ footer {
 <footer>
   <p>caleonm@unadvirtual.edu.co</p>
   <p>andreslm104</p>
-  <p>Marzo de 2022</p>
+  <p>17 Marzo de 2022</p>
 </footer>
 
 </body>
