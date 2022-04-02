@@ -1,0 +1,159 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS</title>
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    </head>
+    <body>
+        <section class="grid-1">
+            <div class="item-1">
+              <h2>CSS (hojas de estilo en cascada)</h2>
+            </div>
+            
+            <div class="item-2">
+              <div class="item-5">
+                <h1 class="title">CSS (hojas de estilo en cascada)</h1>
+
+                <p>CSS son las siglas en inglés para «hojas de estilo en cascada» (Cascading Style Sheets). Básicamente, 
+                  es un lenguaje que maneja el diseño y presentación de las páginas web, es decir, cómo lucen 
+                  cuando un usuario las visita. Funciona junto con el lenguaje HTML que se encarga del contenido 
+                  básico de las páginas.</p>
+            
+                <br>
+                <h1>¿Para que sirve CSS?</h1>
+            
+                <p>Con CSS puedes crear reglas para decirle a tu sitio web cómo quieres mostrar 
+                  la información y puedes guardar los comandos para elementos de estilo (como fuentes, colores, tamaños, etc.) 
+                  separados de los que configuran el contenido.</p>
+                <br>
+                <h1>¿Como usar CSS?</h1>
+                <p>Escribe reglas para la apariencia de tu sitio</p>
+                <p>En lugar de hacer un listado del contenido de la página, CSS utiliza las reglas asignadas a elementos HTML, 
+                  un documento HTML completo o varios de ellos. Estas reglas son procesadas por el navegador web cuando carga 
+                  el archivo HTML.</p>
+                  <p>Una regla se luce asi</p>
+                    <img src="../fase 2/images/queescssregla.jpg" style="width: 80%; "
+                      alt="mockup" width="420" height="210"/>
+                      <h1>Conoce los componentes de la regla</h1>
+                      <h1>Selector CSS</h1>
+                      <div class="row-1">
+                        <div class="column-2" style="background-color:#aaa;">
+                          
+                          <p style="font-size: medium;">1/3 Todas las reglas CSS comienzan con un selector. Este indica la parte del documento donde se aplica la regla. 
+                            Y al selector le siguen una o más declaraciones dentro de corchetes. Existen varias formas de escribir un selector; 
+                            el más básico es el que viste en el ejemplo de arriba: cada elemento HTML a modificar 
+                            se menciona por su nombre (p, div, a, etc.):</p>
+                        </div>
+                        <div class="column-2" style="background-color:#bbb;">
+                          <p style="font-size: medium;">2/3 Pero también puedes señalar los elementos por su clase o atributo. La clase de selector está escrito como un 
+                            punto (.) seguido del nombre de la clase. La identidad del selector se escribe con una almohadilla (#), 
+                            seguida del nombre de identidad</p>
+                          
+                          
+                        </div>
+                        <div class="column-2" style="background-color:#aaa;">
+                          <p style="font-size: medium;">3/3 Y si deseas asignar la misma regla a múltiples elementos, puedes hacerlo con el selector en grupo. 
+                            Este abarca dos o más nombres de elementos separados por comas. El orden no es importante, 
+                            pues la regla se aplicará a todos los elementos que se enumeren: </p>
+                        </div>
+                        <div class="column-2" style="background-color:#bbb;">
+                          <iframe style="width: 100%;" width="460" height="215" src="https://www.youtube.com/embed/AN453so4Mh8" title="YouTube video player" frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowfullscreen></iframe>
+                          <br>
+                          <p>
+                            Breve explicacion y funcion de CSS
+                          </p>
+                        </div>
+                      </div>
+                      <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img src="../fase 2/images/ejemploselector.jpg" style="width:100%">
+                          
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img src="../fase 2/images/ejemplodecomoescribirselector.jpg" style="width:100%">
+                          
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 3</div>
+                          <img src="../fase 2/images/ejemplogrupodeelementos.jpg" style="width:100%">
+                          
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                        </div>
+              </div>
+              
+            </div>
+            
+            <div class="item-3">
+              <div class="programa">
+                <h3>Time Line</h3>
+                <ul>
+                 <li>
+                    <span class="hora">Marzo 28</span>
+                    <span class="titulo">Construccion Layout</span>
+                 </li>
+                 <li>
+                    <span class="hora">Marzo 29</span>
+                    <span class="titulo">Implementacion de paginas</span>
+                 </li>
+                 <li>
+                     <span class="hora">Marzo 30</span>
+                     <span class="titulo">prueba & desarrollo de Botton Gallery</span>
+                 </li>
+                 <li>
+                    <span class="hora">Marzo 31</span>
+                    <span class="titulo">Adaptacion javascript</span>
+                 </li>
+                </ul>
+            </div>
+            </div>
+            <div class="item-4">UNAD - Universidad Nacional abierta y a Distancia - 2022</div>
+          </section>
+          <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+          </script>
+    </body>
+</html>

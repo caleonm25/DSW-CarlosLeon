@@ -1,0 +1,333 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    margin: 0;
+    background: #070707;
+  }
+  
+  .grid-1 {
+    display: grid;
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px auto 80px;
+    grid-gap: 10px;
+    
+    grid-template-areas: "header   header   header"
+                         "main     main     sidebar"
+                         "footer   footer   footer";
+  }
+  
+  /* items */
+  
+  .grid-1 div {
+    color: white;
+    font-size: 18px;
+    padding: 18px;
+    }
+  
+  /* specific item styles */
+  
+  .item-1 {
+    text-align: center;
+    background: #b03532;
+    grid-area: header;
+  }
+  .item-2 {
+    background: #33a8a5;
+    grid-area: main;
+    
+    display: grid;
+    
+    grid-template-columns: 1fr 25%;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    
+    grid-template-areas: "header header"
+                         "article sidebar";
+    
+  }
+  .item-3 {
+    background: #30997a;
+    grid-area: sidebar;
+  }
+  .item-4 {
+    background: #6a478f;
+    grid-area: footer;
+  }
+  .item-5 {
+    background: #da6f2b;
+    grid-area: header;
+  }
+  .item-6 {
+    background: #3d8bb1;
+    grid-area: article;
+  }
+  .item-7 {
+    background: #e03f3f;
+    grid-area: sidebar;
+  }
+  .main {
+   padding: initial;
+    width: 130%;
+    background: #070707;
+  }
+/*basics functions*/
+.title {
+  text-align: center;
+  margin: 1px;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+/* Create two equal columns that floats next to each other */
+.column-2 {
+  float: left;
+  width: 44%;
+  padding: 5px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row-1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-2 {
+    width: 100%;
+  }
+}
+/* Gallerie */
+
+.row {
+  margin: 8px -14px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: gray;
+  padding: 5px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+/*horizontal navigation*/
+* {
+    margin:0px;
+    padding:0px;
+}
+
+#header {
+    margin:auto;
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.nav {
+    width:100%; /*Le establecemos un ancho*/
+    margin:0 auto; /*Centramos automaticamente*/
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+/*SlideShow*/
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*Timeline*/
+.programa li {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  padding-left: 0.3rem;
+  position: relative;
+}
+.hora {
+  float: left;
+  width: 10%;
+  text-align: right;
+  color: black;
+  font-family: Poppins, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 18%;
+  line-height: 1.4rem;
+  margin-right: 3rem;
+}
+.titulo {
+  float: left;
+  color: whitesmoke;
+  font-family: Poppins, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 18%;
+  line-height: 1.4rem;
+}
+

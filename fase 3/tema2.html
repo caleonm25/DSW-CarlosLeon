@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Frame Works CSS</title>
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    </head>
+    <body>
+        <section class="grid-1">
+            <div class="item-1"><h2>Frameworks CSS</h2></div>
+            
+            <div class="item-2">
+              <div class="item-5">
+                <div id="myBtnContainer">
+                  <button class="btn active" onclick="filterSelection('all')"> Mostrar todo</button>
+                  <button class="btn" onclick="filterSelection('example')"> Ejemplos</button>
+                  <button class="btn" onclick="filterSelection('video')"> Videos</button>
+                </div>
+                <!-- Portfolio Gallery Grid -->
+              <div class="row">
+                    <div class="column example">
+                      <div class="content">
+                        <img src="../fase 2/images/tailwindcss.jpg" style="width:100%">
+                        <h4>tailwindcss</h4>
+                        <br>
+                        <p style="font-size: small;">Este Framework es muy personalizable, te permite crear una interfaz de usuario única, 
+                          te permite jugar con los colores, 
+                          tamaños de borde, tamaño de la fuente, paddings, margenes, sombras y otros elementos y propiedades.</p>
+                      </div>
+                    </div>
+                    <div class="column example">
+                      <div class="content">
+                      <img src="../fase 2/images/purecss.jpg" style="width:100%">
+                        <h4>Pure CSS</h4>
+                        <br>
+                        <p style="font-size: small;">A diferencia de Bootstrap, no permite crear diseños fijos y es 
+                          muy ligero, pesa alrededor de 3.5 Kb solamente cuando se comprime y se minimiza. 
+                          Este Framework cuenta con 
+                          menús verticales, horizontales y desplegables, asimismo con formularios, botones, tablas, etc.</p>
+                      </div>
+                    </div>
+                    <div class="column example">
+                      <div class="content">
+                      <img src="../fase 2/images/bootstrap.jpg" style="width:100%">
+                        <h4>Bootstrap</h4>
+                        <br>
+                        <p style="font-size: small;">Este Framework es uno de los más populares en la actualidad, 
+                          hasta la fecha de este Post se encuentra en su versión 4.4.1, 
+                          cuenta con características muy importantes como esquemas de color, modificadores, 
+                          clases útiles para usar formularios, cards, listas, tablas, videos, carrusel, ventanas modales, tooltips, etc.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="column video">
+                      <div class="content">
+                        <iframe style="width: 100%;" src="https://www.youtube.com/embed/fY_O1Fb-e5Y" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                        <h4>Que es Bootstrap</h4>
+                        <p style="font-size: small;">explicacion breve de ese paquete de diseño dinamico</p>
+                      </div>
+                    </div>
+                    <div class="column video">
+                      <div class="content">
+                        <iframe style="width: 100%;" src="https://www.youtube.com/embed/l2JLES5w__U" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                        <h4>Tailwind</h4>
+                        <p style="font-size: small;">definicion y funcionamiento de TailWind</p>
+                      </div>
+                    </div>
+                    <div class="column video">
+                      <div class="content">
+                        <iframe style="width: 100%;" src="https://www.youtube.com/embed/R1OAyt33wpw" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                        <h4>5 mejores Frameworks</h4>
+                        
+                      </div>
+                    </div>
+          
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="item-3">
+              <div class="programa">
+                <h3>Time Line</h3>
+                <ul>
+                 <li>
+                    <span class="hora">Marzo 28</span>
+                    <span class="titulo">Construccion Layout</span>
+                 </li>
+                 <li>
+                    <span class="hora">Marzo 29</span>
+                    <span class="titulo">Implementacion de paginas</span>
+                 </li>
+                 <li>
+                     <span class="hora">Marzo 30</span>
+                     <span class="titulo">prueba & desarrollo de Botton Gallery</span>
+                 </li>
+                 <li>
+                    <span class="hora">Marzo 31</span>
+                    <span class="titulo">Adaptacion javascript</span>
+                 </li>
+                </ul>
+            </div>
+            </div>
+            
+            <div class="item-4">UNAD - Universidad Nacional abierta y a Distancia - 2022</div>
+            
+          </section>
+          <script>
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("column");
+              if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+            
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            
+            
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+            </script>
+    </body>
+</html>
