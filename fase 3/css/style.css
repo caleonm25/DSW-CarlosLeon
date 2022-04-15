@@ -72,9 +72,10 @@ body {
   .main {
    padding: initial;
     width: 130%;
-    background: #070707;
+    background: #3d8bb1;
   }
 /*basics functions*/
+
 .title {
   text-align: center;
   margin: 1px;
